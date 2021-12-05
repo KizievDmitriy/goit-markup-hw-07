@@ -262,20 +262,20 @@ img {
   cursor: pointer;
 }
 /*--------------- card ---------------------*/
-.title-conteiner {
+.card-label {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
 }
 
-.list-title {
+.card-label__title {
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
 }
 
-.list-work {
+.card-label__text {
   font-size: 16px;
   line-height: 1.87;
   color: var(--title-text-color);
