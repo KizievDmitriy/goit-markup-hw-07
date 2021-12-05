@@ -232,7 +232,7 @@ img {
   transform: translateY(0);
   transition: transform 250ms var(--animation-cubic);
 }
-.card-action-text {
+.card-action__text {
   padding: 63px 24px;
   font-size: 18px;
   line-height: 1.55em;
@@ -268,14 +268,14 @@ img {
   border-top: none;
 }
 
-.list .list-title {
+.list-title {
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
 }
 
-.list .list-work {
+.list-work {
   font-size: 16px;
   line-height: 1.87;
   color: var(--title-text-color);
