@@ -1,0 +1,39 @@
+.section--pecularities {
+  padding-bottom: 0px;
+}
+.pecularities {
+  display: flex;
+}
+.pecularity__item {
+  min-width: 270px;
+  min-height: 101px;
+  margin-right: 30px;
+}
+.pecularity__svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+
+  border-radius: 4px;
+  background: #f5f4fa;
+  margin-bottom: 30px;
+}
+
+.pecularities__title {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.list .pecularities__title {
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.list .pecularities__text {
+  color: $title-text-color;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}

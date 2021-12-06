@@ -1,4 +1,4 @@
-/*------------------------------------- PORTFOLIO.HTML -----------------------------------*/
+  /* ------------------------------------- PORTFOLIO.HTML ----------------------------------- */
 
 :root {
   --primary-text-color: #212121;
@@ -16,9 +16,7 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 400;
   margin: 0;
-  padding: 0;
-}
-.body {
+  padding: 0; 
   padding-top: 80px;
 }
 
@@ -62,7 +60,7 @@ img {
 }
 
 /*--------------------------------------- heder --------------------------------------*/
-
+ 
 .page-header {
   position: fixed;
   min-width: 100%;
@@ -79,8 +77,8 @@ img {
   color: var(--primary-text-color);
   font-family: Raleway;
   /* font-style: 400; */
-  /* font-weight: 700; */
-  font-size: 26px;
+/* font-weight: 700; */
+ font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
 }
@@ -179,7 +177,7 @@ img {
   text-decoration: none;
 
   transition: color 250ms var(--animation-cubic);
-}
+} 
 /*-------------------------------------- block-main --------------------------------------------------*/
 /*------------------------------ filter-button-section -------------------------------------------*/
 .nav-btn {
@@ -385,7 +383,7 @@ img {
   width: 20px;
   height: 20px;
   margin-left: 10px;
-}
+}  
 
 /* ----------------------------------INDEXT.HTML ----------------------------------------*/
 
@@ -792,4 +790,4 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
