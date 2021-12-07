@@ -19,7 +19,6 @@
     font-size: 44px;
     line-height: 1.36;
     color: $accent-text-color;
-
     margin-bottom: 30px;
     width: 696px;
     margin-left: auto;
@@ -33,7 +32,7 @@
     min-height: 50px;
     font-weight: 500;
     border: none;
-    border-radius: 4px;
+    border-radius: $item-border-radius;
     cursor: pointer;
   }
 }

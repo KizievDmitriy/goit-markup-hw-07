@@ -301,6 +301,18 @@ img {
   height: auto;
 }
 
+.list--contacts-nav .list__mail-tel, .footer-btn, .pecularity__svg, .social-link, .client__link, .modal-link, .chekbox-txt, .form__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -338,8 +350,6 @@ img {
   display: inline-block;
   color: #212121;
   font-family: Raleway;
-  /* font-style: 400; */
-  /* font-weight: 700; */
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
@@ -359,29 +369,35 @@ img {
   padding: 0px;
 }
 
-.list__link {
-  display: inline-block;
-}
-
 .list__сurrent--page {
   position: relative;
+}
+
+.list__сurrent--page::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
 }
 
 .list--nav {
   margin-left: 93px;
 }
 
-.list--nav .list__item + .list__item,
-.list--contacts-nav .list__item + .list__item {
+.list__item + .list__item {
   margin-left: 50px;
 }
 
-.list--nav .list__item:last-child,
+.list__item:last-child,
 .pecularities--list:last-child {
   margin-right: 0px;
 }
 
-.list--nav .list__link {
+.list__link {
   display: block;
   font-weight: 500;
   font-size: 14px;
@@ -396,22 +412,8 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.list--nav .list__link:hover,
-.list--contacts-nav .list__mail-tel:focus,
-.list--contacts-nav .list__mail-tel:hover,
-.list--nav .list__link:focus {
+.list__link:hover, .list__link:focus {
   color: #2196f3;
-}
-
-.list__сurrent--page::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #2196f3;
-  border-radius: 2px;
 }
 
 .list__link:hover:after {
@@ -433,15 +435,6 @@ img {
 }
 
 .list--contacts-nav .list__mail-tel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -450,6 +443,10 @@ img {
   text-decoration: none;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list--contacts-nav .list__mail-tel:focus, .list--contacts-nav .list__mail-tel:hover {
+  color: #2196f3;
 }
 
 .nav-btn {
@@ -489,7 +486,6 @@ img {
   background: #2196f3;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
 
 .project-list {
@@ -690,18 +686,6 @@ img {
   margin-left: auto;
 }
 
-.footer-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .mail-label {
   width: 358px;
   height: 50px;
@@ -779,15 +763,6 @@ img {
 }
 
 .pecularity__svg {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 120px;
   border-radius: 4px;
   background: #f5f4fa;
@@ -798,14 +773,11 @@ img {
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 10px;
-}
-
-.list .pecularities__title {
   font-size: 14px;
   line-height: 1.14;
 }
 
-.list .pecularities__text {
+.pecularities__text {
   color: #757575;
   font-size: 14px;
   line-height: 1.71;
@@ -907,15 +879,6 @@ img {
 }
 
 .social-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -925,6 +888,12 @@ img {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover, .social-link:focus {
+  background-color: #2196f3;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 
 .comand-link {
@@ -944,13 +913,6 @@ img {
           transform: scale(1.25);
 }
 
-.social-link:hover,
-.social-link:focus {
-  background-color: #2196f3;
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
-}
-
 .client__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -964,19 +926,9 @@ img {
 .client .client__item {
   width: 170px;
   height: 92px;
-  text-align: center;
 }
 
 .client__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 100%;
   height: 100%;
   color: #afb1b8;
@@ -986,14 +938,13 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client__icon {
-  fill: currentColor;
-}
-
-.client__link:hover,
-.client__link:focus {
+.client__link:hover, .client__link:focus {
   border-color: #2196f3;
   color: #2196f3;
+}
+
+.client__icon {
+  fill: currentColor;
 }
 
 .backdrop {
@@ -1055,15 +1006,6 @@ img {
   right: 8px;
   width: 30px;
   height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   cursor: pointer;
   background: transparent;
   border-radius: 50%;
@@ -1121,23 +1063,8 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form__input:focus,
-.form__input:hover {
+.form__input:focus, .form__input:hover {
   border-color: #2196f3;
-}
-
-.form__input:hover ~ .form__icon,
-.form__input:focus ~ .form__icon {
-  fill: #2196f3;
-}
-
-.form__icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  fill: #212121;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form__input::-webkit-input-placeholder {
@@ -1172,16 +1099,21 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.form__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  fill: #212121;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__input:hover ~ .form__icon,
+.form__input:focus ~ .form__icon {
+  fill: #2196f3;
+}
+
 .chekbox-txt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   position: relative;
   margin-bottom: 30px;
   font-size: 14px;
@@ -1217,6 +1149,10 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.checkbox:checked + .form-checkbox {
+  border-color: #2196f3;
+}
+
 .checkbox-icon {
   position: absolute;
   top: 4px;
@@ -1234,23 +1170,7 @@ img {
           transform: scale(1);
 }
 
-.checkbox:checked + .form-checkbox {
-  border-color: #2196f3;
-}
-
 .chekbox-txt-accent {
   color: #2196f3;
-}
-
-.form__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 /*# sourceMappingURL=main.css.map */

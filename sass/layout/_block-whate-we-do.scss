@@ -1,9 +1,10 @@
 .work-list {
   align-items: center;
+  & .work-list__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
-.work-list .work-list__item:not(:last-child) {
-  margin-right: 30px;
-}
+
 .card-thumb-work {
   position: absolute;
   left: 0;

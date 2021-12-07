@@ -10,12 +10,9 @@
   margin-right: 30px;
 }
 .pecularity__svg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %centeredFlex;
   height: 120px;
-
-  border-radius: 4px;
+  border-radius: $item-border-radius;
   background: #f5f4fa;
   margin-bottom: 30px;
 }
@@ -24,14 +21,11 @@
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 10px;
-}
-
-.list .pecularities__title {
   font-size: 14px;
   line-height: 1.14;
 }
 
-.list .pecularities__text {
+.pecularities__text {
   color: $title-text-color;
   font-size: 14px;
   line-height: 1.71;

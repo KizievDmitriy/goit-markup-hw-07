@@ -68,19 +68,18 @@
   transform: scale(1);
   fill: $accent-text-color;
   transition: transform 250ms $animation-cubic, fill 250ms $animation-cubic;
+  &:hover {
+    transform: scale(1.25);
+    fill: #fff;
+  }
 }
-.footer-item-fill:hover {
-  transform: scale(1.25);
-  fill: #fff;
-}
+
 .mail-box {
   margin-left: auto;
 }
 
 .footer-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %centeredFlex;
 }
 
 .mail-label {
@@ -89,7 +88,7 @@
   margin-right: 12px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
+  border-radius: $item-border-radius;
   outline: none;
   background-color: inherit;
   font-size: 16px;

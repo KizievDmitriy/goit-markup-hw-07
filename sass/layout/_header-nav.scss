@@ -5,28 +5,36 @@
   margin: 0px;
   padding: 0px;
 }
-.list__link {
-  display: inline-block;
-}
+
 .list__сurrent--page {
   position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 2px;
+  }
 }
+
 .list--nav {
   margin-left: 93px;
 }
 
-.list--nav .list__item + .list__item,
-.list--contacts-nav .list__item + .list__item {
+.list__item + .list__item {
   margin-left: 50px;
 }
 
-.list--nav .list__item:last-child,
+.list__item:last-child,
 .pecularities--list:last-child {
   margin-right: 0px;
 }
-.list--nav .list__link {
-  display: block;
 
+.list__link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -36,30 +44,14 @@
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 0;
-
   transition: color 250ms $animation-cubic;
-}
-
-.list--nav .list__link:hover,
-.list--contacts-nav .list__mail-tel:focus,
-.list--contacts-nav .list__mail-tel:hover,
-.list--nav .list__link:focus {
-  color: $accent-color;
-}
-
-.list__сurrent--page::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: $accent-color;
-  border-radius: 2px;
-}
-
-.list__link:hover:after {
-  opacity: 1;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &:hover:after {
+    opacity: 1;
+  }
 }
 
 .list__item-mail-svg {
@@ -77,15 +69,16 @@
 }
 
 .list--contacts-nav .list__mail-tel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %centeredFlex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: $title-text-color;
   text-decoration: none;
-
   transition: color 250ms $animation-cubic;
+  &:focus,
+  &:hover {
+    color: $accent-color;
+  }
 }
